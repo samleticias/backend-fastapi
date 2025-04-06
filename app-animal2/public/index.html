@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="index.js" defer></script>
+    <link rel="stylesheet" href="index.css">
+    <title>AppAnimal</title>
+</head>
+<body>
+    <div class="container">
+        <h1>AppAnimal - Aplicativo Animal</h1>
+        <div class="conteudo">
+          <div class="bloco-formulario">
+            <h2>Novo Animal</h2>
+            <form id="form-animal">
+                <input type="text" id="nome" placeholder="Nome do animal" required>
+                <input type="number" id="idade" placeholder="Idade" required>
+                <select id="sexo" required>
+                    <option value="" disabled selected>Sexo</option>
+                    <option value="Macho">Macho</option>
+                    <option value="Fêmea">Fêmea</option>
+                </select>
+                <input type="text" id="cor" placeholder="Cor" required>
+                <input type="submit" value="Salvar">
+            </form>
+          </div>
+      
+          <div class="bloco-lista">
+            <h2>Animais cadastrados</h2>
+            <ul id="lista-animais"></ul>
+          </div>
+        </div>
+    </div>    
+    <dialog id="detalhes-dialog" class="detalhes">
+        <h3>Detalhes do Animal</h3>
+        <p id="detalhes-conteudo"></p>
+        <button id="fechar-detalhes">Fechar</button>
+    </dialog>  
+</body>
+</html>
